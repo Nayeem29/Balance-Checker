@@ -39,9 +39,14 @@ function saveCalc(money, saving, extra) {
     } else {
         let savingCalc = parseFloat(money) * (savingPercentage / 100);
         console.log(savingCalc);
-        let savingMoney = extra - savingCalc;
-        document.querySelector('#saving-amount').innerText = savingCalc;
-        document.querySelector('#remaining-amount').innerText = savingMoney;
+        if (savingCalc > extra) {
+            alert(`Not enough money for saving ${savingPercentage}%`);
+        } else {
+            let savingMoney = extra - savingCalc;
+            document.querySelector('#saving-amount').innerText = savingCalc;
+            document.querySelector('#remaining-amount').innerText = savingMoney;
+        }
+
     }
 
 }
