@@ -43,6 +43,7 @@ function saveCalc(money, saving, extra) {
             alert(`Not enough money for saving ${savingPercentage}%`);
         } else {
             let savingMoney = extra - savingCalc;
+            console.log(savingMoney);
             document.querySelector('#saving-amount').innerText = savingCalc;
             document.querySelector('#remaining-amount').innerText = savingMoney;
         }
@@ -63,6 +64,5 @@ document.querySelector('#calc-btn').addEventListener('click', () => {
 //Clicking Save Button
 document.querySelector('#save-btn').addEventListener('click', () => {
     const extraMoney = remainingBalance(income.value, expenditure);
-    console.log(extraMoney);
     saveCalc(income.value, saving.value, extraMoney);
 })
