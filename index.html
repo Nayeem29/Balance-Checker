@@ -17,7 +17,7 @@
         <h1 class="text-center text-emerald-400 tracking-wider text-7xl font-bold my-4">Balance Checker</h1>
     </header>
     <main class="mx-auto mt-5 px-5 ">
-        <section class="grid grid-cols-2 gap-3">
+        <section class="grid sm:grid-cols-1 lg:grid-cols-2 gap-3">
             <div class="image mt-5">
                 <img class="w-full h-3/4 border-0 rounded-lg" src="./image/money-saving.jpg" alt="">
             </div>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="input-value flex justify-center mt-3">
                     <label class="items-center" for="Income">Income:</label>
-                    <input class="outline-0 border-2 mx-3 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg" type="number" id="Income" name="Income" value="">
+                    <input id="income-field" class="outline-0 border-2 mx-3 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg" type="number" id="Income" name="Income" value="">
                 </div>
 
                 <!-- Expense  -->
@@ -37,38 +37,46 @@
                     <h1 class="text-center text-2xl font-semibold">Expense</h1>
 
                 </div>
-                <div class="input-value flex justify-center mt-3">
+                <!-- total expense  -->
+                <!-- <div class="input-value flex justify-center mt-3">
                     <label class="items-center" for="Expense">Expense:</label>
-                    <input class="outline-0 border-2 mx-3 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg" type="number" id="Expense" name="Expense" value="">
-                </div>
+                    <input id="expense-field" class="outline-0 border-2 mx-3 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg" type="number" id="Expense" name="Expense" value="">
+                </div> -->
+                <!-- individual expense  -->
                 <div class="input-value flex justify-center mt-3">
                     <label class="items-center" for="Food">Food:</label>
-                    <input class="outline-0 border-2 ml-5 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg" type="number" id="Food" name="Food" value="">
+                    <input id="food-field" class="outline-0 border-2 ml-5 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg" type="number" id="Food" name="Food" value="">
                 </div>
                 <div class="input-value flex justify-center mt-3">
                     <label class="items-center" for="Rent">Rent:</label>
-                    <input class="outline-0 border-2 ml-5 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg" type="number" id="Rent" name="Rent" value="">
+                    <input id="rent-field" class="outline-0 border-2 ml-5 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg" type="number" id="Rent" name="Rent" value="">
                 </div>
                 <div class="input-value flex justify-center mt-3">
                     <label class="items-center" for="Clothes">Clothes:</label>
-                    <input class="border-2 ml-2 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg outline-0" type="number" id="Clothes" name="Clothes" value="">
+                    <input id="clothes-field" class="border-2 ml-2 bg-slate-100 px-3 py-1 text-center border-0 rounded-lg outline-0" type="number" id="Clothes" name="Clothes" value="">
                 </div>
                 <div class="my-8 mx-auto text-center">
-                    <button class="text-2xl text-center font-semibold text-white bg-green-700 px-12 py-1 border-0 rounded-lg">Calculate</button>
+                    <button id="calc-btn" class="text-2xl text-center font-semibold text-white bg-green-700 px-12 py-1 border-0 rounded-lg">Calculate</button>
                 </div>
+
+                <!-- calculation -->
                 <div class="calculation text-center text-2xl font-semibold">
-                    <p>Total Expense: <span>0</span></p>
-                    <p>Balance: <span>0</span></p>
+                    <p>Total Expense: <span id="total-expense">0</span></p>
+                    <p>Balance: <span id="remaining-balance">0</span></p>
                 </div>
+
+                <!-- save  -->
                 <div class="save text-center my-8 flex justify-center mx-auto ">
                     <label class="items-center mx-2 text-xl" for="save">save:</label>
-                    <input class="border-2 bg-slate-100 w-16 mx-2 text-center border-0 rounded-lg outline-0" type="number" id="save" name="save" value="">
+                    <input id="saving-field" class="border-2 bg-slate-100 w-16 mx-2 text-center border-0 rounded-lg outline-0" type="number" id="save" name="save" value="">
                     <p class="mx-2 text-xl">%</p>
-                    <button class="text-2xl text-center font-semibold text-white bg-green-700 border-0 rounded-lg mx-2 px-4 py-1">Save</button>
+                    <button id="save-btn" class="text-2xl text-center font-semibold text-white bg-green-700 border-0 rounded-lg mx-2 px-4 py-1">Save</button>
                 </div>
+
+                <!-- Saving calculation  -->
                 <div class="saving-calc text-center text-2xl font-semibold mt-5">
-                    <p>Saving Amount: <span>0</span></p>
-                    <p>Remaining Balance: <span>0</span></p>
+                    <p>Saving Amount: <span id="saving-amount">0</span></p>
+                    <p>Remaining Balance: <span id="remaining-amount">0</span></p>
                 </div>
 
             </div>
